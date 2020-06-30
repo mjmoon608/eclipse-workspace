@@ -1,0 +1,46 @@
+package GameCharacter;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+ 
+
+public class Item {
+	Map<String, Integer> characterItem = new HashMap<String, Integer>();
+	
+	public Item() {
+		characterItem.put("나뭇 가지", 0);
+		characterItem.put("달팽이 껍질", 0);
+		characterItem.put("투구", 0);
+		
+	}
+	
+	public void show() {
+		System.out.println("********************************************");
+		Set<Map.Entry<String, Integer>> allItems = characterItem.entrySet();
+		
+		for (Map.Entry<String, Integer> item : allItems) {
+			System.out.print(item.getKey() + " : ");
+			System.out.println(item.getValue() + "개");
+		}
+	}
+	
+	public void addItem(String itemName) {
+
+		if (characterItem.get(itemName) == null) {
+			System.out.println("새로운 아이템을 습득하였습니다.");
+			characterItem.put(itemName, 1);
+		}else {
+			int ammount = characterItem.get(itemName);
+			characterItem.put(itemName, ammount+1);
+		}
+
+	}
+	
+	public void removeItem(String itemName) {
+		int ammount = characterItem.get(itemName);
+		characterItem.put(itemName, ammount-1);
+	}
+	
+}

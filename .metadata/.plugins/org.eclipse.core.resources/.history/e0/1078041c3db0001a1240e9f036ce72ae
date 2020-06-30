@@ -1,0 +1,28 @@
+package Prac;
+
+import java.util.Scanner;
+
+public class BackAccount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		class CreateNewAccount {
+			Scanner input = new Scanner(System.in);
+		
+			private CreateNewAccount() {
+				System.out.print("계좌를 입력하세요(-포함해서 입력하세요): ");
+				String newAccount = input.nextLine();
+				System.out.print("현재 잔액을 입력하세요 ");
+				int newCurrnetBalance = input.nextInt();
+			}
+		}
+		
+		CreateNewAccount createNewAccount = new CreateNewAccount();
+		
+		
+		
+
+	}
+
+}

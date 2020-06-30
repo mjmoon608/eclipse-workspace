@@ -1,0 +1,17 @@
+package GameCharacter;
+
+
+//character -name - level -item -skills
+
+public class Character {
+	Item item = new Item();
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		item.show();
+	}
+
+}

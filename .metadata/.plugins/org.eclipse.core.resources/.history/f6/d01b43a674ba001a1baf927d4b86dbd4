@@ -1,0 +1,20 @@
+package GameCharacter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+// character -name - level -item -skills
+
+public class Item {
+	Map<String, Integer> characterSkill = new HashMap<String, Integer>();
+	
+	public Item() {
+		characterSkill.put("더블 어택", 0);
+		characterSkill.put("더블 점프", 0);
+		characterSkill.put("체인 라이트닝", 0);
+		
+		System.out.println(characterSkill);
+	}
+	
+	
+}

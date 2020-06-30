@@ -1,0 +1,54 @@
+package GameCharacter;
+
+import java.util.Scanner;
+
+//character -name - level -item -skills
+
+public class Character {
+	
+	private String _name;
+	private int _level;
+	private int _hp;
+	private int _mp;
+	
+	static Item item = new Item();
+	static Skill skill = new Skill();
+
+	public Character(String name) {
+		_name = name;
+		_level = 1;
+		_hp = 100;
+		_mp = 100;
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+	
+		System.out.print("캐릭터의 이름을 입력하세요 : ");
+		String input_name = input.nextLine();
+		
+		
+		Character first = new Character(input_name);
+		
+		while(true) {
+			System.out.print("아이템창 : 1, 스킬 창: 2   ->");
+			int choice = input.nextInt();
+			
+			switch(choice) {
+			case 1:
+				item.show();
+				break;
+			case 2:
+				skill.show();
+				break;
+			}
+			
+			
+		}
+		
+	}
+
+}

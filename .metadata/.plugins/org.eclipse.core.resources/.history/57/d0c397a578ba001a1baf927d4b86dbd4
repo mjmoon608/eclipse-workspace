@@ -1,0 +1,28 @@
+package GameCharacter;
+
+
+//character -name - level -item -skills
+
+public class Character {
+	
+	private String _name;
+	private int _level;
+
+
+	
+	public Character(String name) {
+		_name = name;
+		_level = 1;
+		Item item = new Item();
+		Skill skill = new Skill();
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+		Character first = new Character("minjong");
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package GameCharacter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Item {
+	Map<String, Integer> characterSkill = new HashMap<>();
+	
+	characterSkill.put("attack", 0);
+	
+}

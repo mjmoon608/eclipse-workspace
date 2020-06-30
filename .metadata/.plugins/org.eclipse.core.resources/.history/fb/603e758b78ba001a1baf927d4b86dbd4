@@ -1,0 +1,39 @@
+package GameCharacter;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+ 
+
+public class Item {
+	Map<String, Integer> characterItem = new HashMap<String, Integer>();
+	
+	public Item() {
+		characterItem.put("³ª¹µ °¡Áö", 0);
+		characterItem.put("´ÞÆØÀÌ ²®Áú", 0);
+		characterItem.put("Åõ±¸", 0);
+		
+		
+	}
+	
+	public void show() {
+		Set<Map.Entry<String, Integer>> allItems = characterItem.entrySet();
+		
+		for (Map.Entry<String, Integer> item : allItems) {
+			System.out.print(item.getKey() + " : ");
+			System.out.println(item.getValue() + "°³");
+		}
+	}
+	
+	public void addItem(String itemName) {
+		int ammount = characterItem.get(itemName);
+		characterItem.put(itemName, ammount+1);
+	}
+	
+	public void removeItem(String itemName) {
+		int ammount = characterItem.get(itemName);
+		characterItem.put(itemName, ammount-1);
+	}
+	
+}

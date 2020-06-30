@@ -1,0 +1,33 @@
+package GameCharacter;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Skill {
+Map<String, Integer> characterItem = new HashMap<String, Integer>();
+	
+	public Skill() {
+		characterItem.put("더블 점프", 0);
+		characterItem.put("체인 라이트닝", 0);
+		characterItem.put("블리자드", 0);
+		
+		
+	}
+	
+	public void show() {
+		Set<Map.Entry<String, Integer>> allSkills = characterItem.entrySet();
+		
+		for (Map.Entry<String, Integer> skill : allSkills) {
+			System.out.print(skill.getKey() + " : ");
+			System.out.println(skill.getValue() + " point");
+		}
+	}
+	
+	public void powerUp(String itemName) {
+		int ammount = characterItem.get(itemName);
+		characterItem.put(itemName, ammount+1);
+	}
+	
+
+}

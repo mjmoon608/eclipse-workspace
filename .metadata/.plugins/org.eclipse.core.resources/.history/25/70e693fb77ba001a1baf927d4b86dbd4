@@ -1,0 +1,28 @@
+package GameCharacter;
+
+
+//character -name - level -item -skills
+
+public class Character {
+	
+	private String _name;
+	private int _level;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+		item.show();
+		item.addItem("¥ﬁ∆ÿ¿Ã ≤Æ¡˙");
+		item.show();
+	}
+	
+	public Character(String name) {
+		_name = name;
+		_level = 1;
+		Item item = new Item();
+		Skill skill = new Skill();
+		
+	}
+
+}
