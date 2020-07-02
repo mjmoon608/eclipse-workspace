@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 //character -name - level -item -skills
 
+// main에서 world에  new character를 만들고 각 character에서 item, skill에 접근
+
 public class Character {
 	
 	private String _name;
@@ -11,7 +13,9 @@ public class Character {
 	private int _hp;
 	private int _mp;
 	
-	static Item item = new Item();
+	static Inventory item = new Inventory("달팽이 껍질", 1);
+	
+	
 	static Skill skill = new Skill();
 
 	public Character(String name) {
@@ -19,6 +23,9 @@ public class Character {
 		_level = 1;
 		_hp = 100;
 		_mp = 100;
+		
+//		item.addItem("나뭇 가지");
+//		item.addItem("허름한 투구");
 		
 	}
 	
